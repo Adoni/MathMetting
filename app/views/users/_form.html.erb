@@ -64,9 +64,10 @@
         </tbody>
       </table>
 
-        </br>
 
+        <center>
       <%=submit_tag "提交注册", class: "btn btn-primary"%>
-      <button class="btn btn-primary">清空表单</button>
-      <button class="btn btn-primary">浏览已注册人员</button>
+      <a class="btn btn-danger" href="/users/new">清空表单</button>
+      <a class="btn btn-info" href="/users/all">浏览已注册人员</button>
+      </center>
   <%end%>

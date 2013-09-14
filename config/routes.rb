@@ -1,4 +1,5 @@
 Mathmetting::Application.routes.draw do
-  root :to=>"users#home"
+  root :to=>"users#new"
+  get '/users/all', to: 'users#all'
   resources :users
 end

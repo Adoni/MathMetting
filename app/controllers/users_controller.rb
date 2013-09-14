@@ -75,8 +75,8 @@ class UsersController < ApplicationController
     end
   end
 
-  def allregister
-    @users.User.all
+  def all
+    @users=User.all
   end
 
   private

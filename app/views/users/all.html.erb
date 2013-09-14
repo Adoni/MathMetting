@@ -1,0 +1,31 @@
+<h1>注册者信息汇总</h1>
+<table class="table table-bordered table-condensed table-hover">
+	<thead>
+		<tr>
+			<th>姓名</th>
+            <th>性别</th>
+			<th>年龄</th>
+			<th>学校</th>
+			<th>职称</th>
+			<th>代表类型</th>
+			<th>理事</th>
+			<th>邮箱</th>
+			<th>手机</th>
+		</tr>
+	</thead>
+	<tbody>
+		<%@users.each do |f|%>
+			<tr>
+				<td><%=f.name%></td>
+				<td><%=f.gender%></td>
+				<td><%=f.age%></td>
+				<td><%=f.school%></td>
+				<td><%=f.title%></td>
+				<td><%=f.style%></td>
+				<td><%=f.syndic%></td>
+				<td><%=f.email%></td>
+				<td><%=f.tel%></td>
+			</tr>
+		<%end%>
+	</tbody>
+</table>
