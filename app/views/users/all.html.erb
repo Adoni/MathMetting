@@ -14,7 +14,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<%@users.each do |f|%>
+		<%User.all.each do |f|%>
 			<tr>
 				<td><%=f.name%></td>
 				<td><%=f.gender%></td>
