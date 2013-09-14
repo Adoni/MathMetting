@@ -1,0 +1,87 @@
+<div class="navbar navbar-inverse ">
+  <div class="navbar-inner">
+      <a class="brand" href="#">
+          <h2>2013黑龙江数学大会</h2>
+      </a>
+</br>
+</br>
+      <div class="nav pull-right btn-group">
+          <%=form_tag :method=>"post", :class=>"form-search" do %>
+              <%=search_field_tag "commodity_to_search", "search", :class=>"input-medium search-query"%>
+              <%=submit_tag "搜索", :class=>"btn btn-primary"%>
+          <%end%>
+      </div>
+      <ul class="nav pull-right btn-group">
+	      <li><%=button_to "首页",root_path, :class=>"btn btn-primary"%></li>
+       	  <li><button class="btn btn-primary" href="#login" data-toggle="modal">管理员登录</button></li>
+       	  <li><button class="btn btn-primary" href="#register" data-toggle="modal">注册</button></li>
+      </ul>
+  </div>
+</div>
+
+<!-- Modal -->
+<!-- Login Window -->
+<div id="login" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">用户登录</h3>
+  </div>
+  <div class="modal-body">
+    <input type="text" placeholder="用户名">
+    </br>
+    <input type="text" placeholder="密码">
+  </div>
+  <div class="modal-footer">
+  </div>
+</div>
+<!-- Register Window -->
+<div id="register" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">用户注册</h3>
+  </div>
+  <%=form_tag "users" do%>
+  <div class="modal-body">
+      <%=label_tag "邮箱"%>
+      <%=text_field_tag "email"%>
+      <!--
+      </br>
+      <%=label_tag "密码"%>
+      <%=password_field_tag "password"%>
+      </br>
+      -->
+      <%=label_tag "姓名"%>
+      <%=text_field_tag "lastname", nil, placeholder:"姓"%>
+      <%=text_field_tag "firstname", nil, placeholder:"名"%>
+      </br>
+      <%=label_tag "学校"%>
+      <%=text_field_tag "school"%>
+      </br>
+      <%=label_tag "职称"%>
+      <%=text_field_tag "title"%>
+      </br>
+      <%=label_tag "年龄"%>
+      <%=text_field_tag "age"%>
+      </br>
+      <%=label_tag "到达时间"%>
+      <input type="text" data-behaviour='datepicker' >
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+            $('[data-behaviour~=datepicker]').datepicker({format: 'yyyy-mm-dd'});
+        })
+      </script>
+      </br>
+      <%=label_tag "离开时间"%>
+      <input type="text" data-behaviour='datepicker' >
+      <script type="text/javascript">
+        $(document).ready(function(){
+            $('[data-behaviour~=datepicker]').datepicker({format: 'yyyy-mm-dd'});
+        })
+      </script>
+  </div>
+  <div class="modal-footer">
+      <%=submit_tag "注册" , class: "btn btn-primary"%>
+  </div>
+  <%end%>
+</div>

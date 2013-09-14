@@ -1,0 +1,72 @@
+  <%=form_tag "/users/" do%>
+      <table class="table table-bordered">
+        <thead><tr><th>regester</th></tr></thead>
+        <tbody>
+          <tr>
+            <th>邮箱</th>
+            <td><%=text_field_tag "email"%></td>
+            <th>姓名</th>
+            <td><%=text_field_tag "name"%><td>
+          </tr>
+
+          <tr>
+            <th>年龄</th>
+            <td><%=text_field_tag "age"%></td>
+            <th>性别</th>
+            <td><%=select_tag "gender", options_for_select([ "男", "女" ])%></td>
+          </tr>
+          <tr>
+            <th>学校</th>
+            <td><%=text_field_tag "school"%></td>
+            <th>职称</th>
+            <td><%=select_tag "title", options_for_select([ "院士", "教授","副教授","讲师","研究员","副研究员","助理研究员","博士研究生","硕士研究生","其他" ])%></td>
+          </tr>
+          <tr>
+            <th>是否理事</th>
+            <td><%=select_tag "syndic", options_for_select([ "现任常务理事", "现任理事", "非理事" ])%></td>
+            <th>代表类型</th>
+            <td><%=select_tag "style", options_for_select([ "特邀代表", "会议邀请报告人", "其他" ])%></td>
+          </tr>
+          <tr>
+            <th>到达时间</th>
+            <td><input type="text" id="arrivedate" name="arrivedate" data-behaviour='datepicker' ></td>
+
+            <script type="text/javascript">
+              $(document).ready(function(){
+                  $('[data-behaviour~=datepicker]').datepicker({format: 'yyyy-mm-dd'});
+              })
+            </script>
+
+            <th>离开时间</th>
+            <td><input type="text" id="leavedate" name="leavedate" data-behaviour='datepicker' ></td>
+            <script type="text/javascript">
+              $(document).ready(function(){
+                  $('[data-behaviour~=datepicker]').datepicker({format: 'yyyy-mm-dd'});
+              })
+            </script>
+          </tr>
+          <tr>
+            <th>手机号码</th>
+            <td><%=text_field_tag "tel"%></td>
+            <th>电话号码</th>
+            <td><%=text_field_tag "phone"%></td>
+          </tr>
+          <tr>
+            <th>通讯地址</th>
+            <td><%=text_field_tag "address"%></td>
+            <th>邮政编码</th>
+            <td><%=text_field_tag "postcode"%></td>
+          </tr>
+          <tr>
+            <th>特殊需求</th>
+            <td><%=text_field_tag "require"%></td>
+          </tr>
+        </tbody>
+      </table>
+
+        </br>
+
+      <%=submit_tag "提交注册", class: "btn btn-primary"%>
+      <button class="btn btn-primary">清空表单</button>
+      <button class="btn btn-primary">浏览已注册人员</button>
+  <%end%>

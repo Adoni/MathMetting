@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  age: 1
+  school: MyString
+  title: MyString
+  arrivedate: 2013-09-13
+  arrivetime: 2013-09-13 21:10:13
+  leavedate: 2013-09-13
+  leavetime: 2013-09-13 21:10:13
+  gender: MyString
+
+two:
+  name: MyString
+  age: 1
+  school: MyString
+  title: MyString
+  arrivedate: 2013-09-13
+  arrivetime: 2013-09-13 21:10:13
+  leavedate: 2013-09-13
+  leavetime: 2013-09-13 21:10:13
+  gender: MyString

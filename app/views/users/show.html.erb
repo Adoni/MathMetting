@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+      <table class="table table-bordered">
+        <thead><tr><th>注册者信息</th></tr></thead>
+        <tbody>
+          <tr>
+            <th>邮箱</th>
+            <td><%=@user.email%></td>
+            <th>姓名</th>
+            <td><%=@user.name%><td>
+          </tr>
+
+          <tr>
+            <th>年龄</th>
+            <td><%=@user.age%></td>
+            <th>性别</th>
+            <td><%=@user.gender%></td>
+          </tr>
+          <tr>
+            <th>学校</th>
+            <td><%=@user.school%></td>
+            <th>职称</th>
+            <td><%=@user.title%></td>
+          </tr>
+          <tr>
+            <th>是否理事</th>
+            <td><%=@user.syndic%></td>
+            <th>代表类型</th>
+            <td><%=@user.style%></td>
+          </tr>
+          <tr>
+            <th>到达时间</th>
+            <td><%=@user.arrivedate%></td>
+            <th>离开时间</th>
+            <td><%=@user.leavedate%></td>
+          </tr>
+          <tr>
+            <th>手机号码</th>
+            <td><%=@user.tel%></td>
+            <th>电话号码</th>
+            <td><%=@user.phone%></td>
+          </tr>
+          <tr>
+            <th>通讯地址</th>
+            <td><%=@user.address%></td>
+            <th>邮政编码</th>
+            <td><%=@user.postcode%></td>
+          </tr>
+          <tr>
+            <th>特殊需求</th>
+            <td><%=@user.require%></td>
+          </tr>
+        </tbody>
+      </table>
+
+        </br>
+
+      <button class="btn btn-primary">修改资料</button>
+      <button class="btn btn-primary">浏览已注册人员</button>
