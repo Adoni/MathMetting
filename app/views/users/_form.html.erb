@@ -39,7 +39,14 @@
                 <label class="control-label" for="inputError">(必填)</label>
               </div>
             </th>
-            <td><%=select_tag "gender", options_for_select([ "男", "女" ])%></td>
+            <td>
+                <select id="gender" name="gender" required>
+                    <option value=""></option>
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                </select>
+            </td>
+            </td>
           </tr>
           <tr>
             <th>
@@ -57,7 +64,21 @@
                 <label class="control-label" for="inputError">(必填)</label>
               </div>
             </th>
-            <td><%=select_tag "title", options_for_select([ "院士", "教授","副教授","讲师","研究员","副研究员","助理研究员","博士研究生","硕士研究生","其他" ])%></td>
+            <td>
+                <select id="title" name="title" required>
+                    <option value=""></option>
+                    <option value="院士">院士</option>
+                    <option value="教授">教授</option>
+                    <option value="副教授">副教授</option>
+                    <option value="讲师">讲师</option>
+                    <option value="研究员">研究员</option>
+                    <option value="副研究员">副研究员</option>
+                    <option value="助理研究员">助理研究员</option>
+                    <option value="博士研究生">博士研究生</option>
+                    <option value="硕士研究生">硕士研究生</option>
+                    <option value="其他">其他</option>
+                </select>
+            </td>
           </tr>
           <tr>
             <th>
@@ -66,14 +87,28 @@
                 <label class="control-label" for="inputError">(必填)</label>
               </div>
             </th>
-            <td><%=select_tag "syndic", options_for_select([ "现任常务理事", "现任理事", "非理事" ])%></td>
+            <td>
+                <select id="syndic" name="syndic" required>
+                    <option value=""></option>
+                    <option value="现任常务理事">现任常务理事</option>
+                    <option value="现任理事">现任理事</option>
+                    <option value="非理事">非理事</option>
+                </select>
+            </td>
             <th>
               代表类型
               <div class="control-group error">
                 <label class="control-label" for="inputError">(必填)</label>
               </div>
             </th>
-            <td><%=select_tag "style", options_for_select([ "特邀代表", "会议邀请报告人", "其他" ])%></td>
+            <td>
+                <select id="style" name="style" require>
+                    <option value=""></option>
+                    <option value="特邀代表">特邀代表</option>
+                    <option value="会议邀请报告人">会议邀请报告人</option>
+                    <option value="其他">其他</option>
+                </select>
+            </td>
           </tr>
           <tr>
             <th>

@@ -1,7 +1,7 @@
 <div class="navbar navbar-inverse ">
   <div class="navbar-inner">
       <a class="brand" href="#">
-          <h2>2013黑龙江数学大会</h2>
+          <h2>2013黑龙江数学大会(测试)</h2>
       </a>
 </br>
 </br>
@@ -14,7 +14,7 @@
       </div>
     -->
       <ul class="nav pull-right btn-group">
-	      <li><%=button_to "首页",root_path, :class=>"btn btn-primary"%></li>
+          <li><%=button_to "首页",{action:"new"}, :class=>"btn btn-primary",:method=>"get"%></li>
        	  <li><button class="btn btn-primary" href="#login" data-toggle="modal">管理员登录</button></li>
       </ul>
   </div>
