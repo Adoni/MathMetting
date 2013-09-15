@@ -1,35 +1,88 @@
   <%=form_tag "/users/" do%>
       <table class="table table-bordered">
-        <thead><tr><th>regester</th></tr></thead>
+          <thead><tr><th></th></tr></thead>
         <tbody>
           <tr>
-            <th>邮箱</th>
-            <td><%=text_field_tag "email"%></td>
-            <th>姓名</th>
-            <td><%=text_field_tag "name"%><td>
+            <th>
+              姓名
+              <div class="control-group error">
+                <label class="control-label" for="inputError">(必填)</label>
+              </div>
+            </th>
+            <td>
+              <input class="span3" id="name" name="name" type="text" required>
+            </td>
+            <th>
+              邮箱
+              <div class="control-group error">
+                <label class="control-label" for="inputError">(必填)</label>
+              </div>
+            </th>
+            <td>
+              <input class="span3" id="email" name="email" type="email" required>
+            </td>
           </tr>
 
           <tr>
-            <th>年龄</th>
-            <td><%=text_field_tag "age"%></td>
-            <th>性别</th>
+            <th>
+              年龄
+              <div class="control-group error">
+                <label class="control-label" for="inputError">(必填)</label>
+              </div>
+            </th>
+            <td>
+              <input class="span3" id="age" name="age" type="number" required>
+            </td>
+            <th>
+              性别
+              <div class="control-group error">
+                <label class="control-label" for="inputError">(必填)</label>
+              </div>
+            </th>
             <td><%=select_tag "gender", options_for_select([ "男", "女" ])%></td>
           </tr>
           <tr>
-            <th>学校</th>
-            <td><%=text_field_tag "school"%></td>
-            <th>职称</th>
+            <th>
+              学校
+              <div class="control-group error">
+                <label class="control-label" for="inputError">(必填)</label>
+              </div>
+            </th>
+            <td>
+              <input class="span3" id="school" name="school" type="text" required>
+            </td>
+            <th>
+              职称
+              <div class="control-group error">
+                <label class="control-label" for="inputError">(必填)</label>
+              </div>
+            </th>
             <td><%=select_tag "title", options_for_select([ "院士", "教授","副教授","讲师","研究员","副研究员","助理研究员","博士研究生","硕士研究生","其他" ])%></td>
           </tr>
           <tr>
-            <th>是否理事</th>
+            <th>
+              是否理事
+              <div class="control-group error">
+                <label class="control-label" for="inputError">(必填)</label>
+              </div>
+            </th>
             <td><%=select_tag "syndic", options_for_select([ "现任常务理事", "现任理事", "非理事" ])%></td>
-            <th>代表类型</th>
+            <th>
+              代表类型
+              <div class="control-group error">
+                <label class="control-label" for="inputError">(必填)</label>
+              </div>
+            </th>
             <td><%=select_tag "style", options_for_select([ "特邀代表", "会议邀请报告人", "其他" ])%></td>
           </tr>
           <tr>
-            <th>到达时间</th>
-            <td><input type="text" id="arrivedate" name="arrivedate" data-behaviour='datepicker' ></td>
+            <th>
+              到达时间
+              <div class="control-group error">
+                <label class="control-label" for="inputError">(必填)</label>
+              </div>
+            </th>
+            <td><input type="text" id="arrivedate" name="arrivedate" data-behaviour='datepicker' required></td>
 
             <script type="text/javascript">
               $(document).ready(function(){
@@ -37,8 +90,13 @@
               })
             </script>
 
-            <th>离开时间</th>
-            <td><input type="text" id="leavedate" name="leavedate" data-behaviour='datepicker' ></td>
+            <th>
+              离开时间
+              <div class="control-group error">
+                <label class="control-label" for="inputError">(必填)</label>
+              </div>
+            </th>
+            <td><input type="text" id="leavedate" name="leavedate" data-behaviour='datepicker' required></td>
             <script type="text/javascript">
               $(document).ready(function(){
                   $('[data-behaviour~=datepicker]').datepicker({format: 'yyyy-mm-dd'});
@@ -47,7 +105,9 @@
           </tr>
           <tr>
             <th>手机号码</th>
-            <td><%=text_field_tag "tel"%></td>
+            <td>
+              <input class="span3" id="tel" name="tel" type="text">
+            </td>
             <th>电话号码</th>
             <td><%=text_field_tag "phone"%></td>
           </tr>
@@ -55,7 +115,7 @@
             <th>通讯地址</th>
             <td><%=text_field_tag "address"%></td>
             <th>邮政编码</th>
-            <td><%=text_field_tag "postcode"%></td>
+            <td><input class="span3" id="postcode" name="postcode" type="number"></td>
           </tr>
           <tr>
             <th>特殊需求</th>
@@ -65,9 +125,9 @@
       </table>
 
 
-        <center>
-      <%=submit_tag "提交注册", class: "btn btn-primary"%>
-      <a class="btn btn-danger" href="/users/new">清空表单</button>
-      <a class="btn btn-info" href="/users/all">浏览已注册人员</button>
+      <center>
+          <%=submit_tag "提交注册", class: "btn btn-primary"%>
+          <a class="btn btn-danger" href="/users/new">清空表单</button>
+          <a class="btn btn-info" href="/users/all">浏览已注册人员</button>
       </center>
   <%end%>

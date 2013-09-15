@@ -75,6 +75,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def login
+    if(session==nil)
+      session=Session.new
+    end
+    if(params[:adminame]=="admin" and params[:adminpassword]=="HNUmath")
+      session[:admin]="admin"
+    else
+    end
+    redirect_to new_user_path
+  end
   def all
     @users=User.all
   end
@@ -87,5 +97,15 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
+    end
+    def iserror
+      @isempty=[];
+      mustwrite=["name","title", "school","email", "arrivedate","leavedate"]
+      mustwrite.each do |m|
+        if(params[m]=="")
+          @isempty<<m
+        end
+      end
+      @isempty.empty?
     end
 end
